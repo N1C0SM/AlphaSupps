@@ -1,57 +1,30 @@
-# AlphaSupps 💊
+# AlphaSupps
 
-> Tienda online especializada en suplementos deportivos, enfocada en creatina y productos para maximizar tu rendimiento.
-
----
-
-## 🔍 Descripción
-
-AlphaSupps ofrece suplementos de alta calidad para deportistas que buscan mejorar su fuerza, resistencia y recuperación. Nuestra tienda digital está diseñada para facilitar la compra rápida y segura, con un diseño moderno y confiable.
+Tu tienda privada de suplementos deportivos premium, especializada en creatina y todo lo que necesitas para rendir al máximo.
 
 ---
 
-## ✨ Características
+## ⚠️ Privacidad y Uso
 
-- ✅ Catálogo completo de suplementos deportivos, especialmente creatina  
-- ✅ Proceso de compra seguro y sencillo  
-- ✅ Diseño limpio y profesional que genera confianza  
-- ✅ Responsive y optimizado para todos los dispositivos  
+Este repositorio es **privado** y todo el código es propiedad exclusiva de Nicolás San Marcos.  
+No está permitido usar, copiar, distribuir ni modificar nada sin permiso explícito.
 
 ---
 
-## 🚀 Demo en vivo
+## 🎯 Qué encontrarás aquí
 
-[Ver demo en GitHub Pages](https://github.com/n1c0sm/alphasupps)
-
----
-
-## 🛠 Tecnologías usadas
-
-- HTML  
-- CSS  
-- JavaScript  
-- Bootstrap
+- Diseño limpio y profesional, pensado para convertir visitas en clientes.  
+- Experiencia rápida y fluida en móvil y escritorio.  
+- Productos seleccionados con foco en calidad y resultados.
 
 ---
 
-## 📱 Responsive
+## 📲 ¿Quieres saber más?
 
-La tienda está adaptada para brindar una experiencia óptima desde móviles, tablets y ordenadores.
-
----
-
-## 📩 Contacto
-
-¿Quieres más información o colaborar? Contáctame por WhatsApp:
+Hablemos por WhatsApp y te cuento cómo hacer que tu tienda destaque:
 
 [Contáctame por WhatsApp](https://wa.me/34689906638)
 
 ---
 
-## 📝 Licencia
-
-MIT License © 2025 Nicolás San Marcos
-
----
-
-*Gracias por visitar AlphaSupps. Tu rendimiento, nuestra prioridad 👋*
+© 2025 Nicolás San Marcos – Todos los derechos reservados.
