@@ -1,0 +1,84 @@
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0f0f0f;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+      h1 {
+      color: #e0b94d;
+      margin: 0;
+    }
+}
+
+    .product-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #e0b94d;
+    }
+ a{
+        text-decoration: none;
+        color: white;
+    }
+    .cta-btn {
+      background-color: #e0b94d;
+      color: #000;
+      font-weight: bold;
+      padding: 12px 24px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #fff;
+      color: #111;
+    }
+
+    .whatsapp {
+      margin-top: 20px;
+      display: inline-block;
+      color: #25D366;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    .whatsapp:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      border-top: 1px solid #333;
+      font-size: 0.9em;
+    }
+
+    .testimonial {
+      background-color: #1a1a1a;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 10px;
+      font-style: italic;
+    }

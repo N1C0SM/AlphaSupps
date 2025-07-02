@@ -6,15 +6,15 @@ Tu tienda privada de suplementos deportivos premium, especializada en creatina y
 
 ## ⚠️ Privacidad y Uso
 
-Este repositorio es **privado** y todo el código es propiedad exclusiva de Nicolás San Marcos.  
+Este repositorio es **privado** y todo el código es propiedad exclusiva de Nicolás San Marcos.
 No está permitido usar, copiar, distribuir ni modificar nada sin permiso explícito.
 
 ---
 
 ## 🎯 Qué encontrarás aquí
 
-- Diseño limpio y profesional, pensado para convertir visitas en clientes.  
-- Experiencia rápida y fluida en móvil y escritorio.  
+- Diseño limpio y profesional, pensado para convertir visitas en clientes.
+- Experiencia rápida y fluida en móvil y escritorio.
 - Productos seleccionados con foco en calidad y resultados.
 
 ---
