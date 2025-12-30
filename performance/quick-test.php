@@ -82,7 +82,7 @@ $optimizations = [
     'Sistema de cache' => file_exists('../cache/database/'), // Verificar directorio de cache
     'Optimización de imágenes' => file_exists('../includes/image-optimizer.php'),
     'CSS crítico' => strpos(file_get_contents('../components/head.php'), '--accent:') !== false,
-    'Service Worker' => file_exists('../sw.js'),
+    'Service Worker' => file_exists('../js/sw.js'),
     'Manifest PWA' => file_exists('../manifest.json')
 ];
 

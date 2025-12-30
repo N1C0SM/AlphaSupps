@@ -1,5 +1,4 @@
 <?php
-// Incluir configuración de sesión
 require_once __DIR__ . '/config/session.php';
 
 function loadEnv($path)
@@ -23,10 +22,8 @@ function loadEnv($path)
     }
 }
 
-// Cargar .env si existe
 loadEnv(__DIR__ . '/.env');
 
-// Valores por defecto si no están en .env
 define("DB_HOST", getenv('DB_HOST') ?: 'localhost');
 define("DB_USER", getenv('DB_USER') ?: 'root');
 define("DB_PASS", getenv('DB_PASS') ?: '');
@@ -37,7 +34,6 @@ $defaultSocket = file_exists('/Applications/MAMP/tmp/mysql/mysql.sock')
     : '';
 define("DB_SOCKET", getenv('DB_SOCKET') ?: $defaultSocket);
 
-// Desactivar los reportes estrictos para evitar excepciones fatales (PHP 8.1+)
 mysqli_report(MYSQLI_REPORT_OFF);
 
 $conn = new mysqli(

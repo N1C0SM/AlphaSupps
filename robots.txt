@@ -24,7 +24,7 @@ Disallow: /node_modules/
 Disallow: /phpMailer/
 Disallow: /.git/
 Disallow: /.env
-Disallow: /sitemap-generator.php
+Disallow: /sitemap/sitemap-generator.php
 
 # Bloquear páginas de usuario sin valor SEO
 Disallow: /views/cart.php
@@ -84,5 +84,4 @@ Disallow: /
 Crawl-delay: 1
 
 # Sitemap principal
-Sitemap: https://alphasupps.alwaysdata.net/sitemap.xml
-
+Sitemap: https://alphasupps.alwaysdata.net/sitemap/sitemap.xml

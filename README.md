@@ -94,15 +94,13 @@ AlphaSupps/
 ├── controllers/           # Lógica de negocio (MVC)
 ├── css/                   # Estilos CSS modulares
 ├── images/                # Recursos gráficos
-├── js/                    # JavaScript vanilla
+├── js/                    # JavaScript vanilla (incl. sw.js)
 ├── models/                # Modelos de datos (MVC)
 ├── phpMailer/             # Librería de emails
 ├── views/                 # Vistas públicas (MVC)
 ├── landing/               # Página de pre-lanzamiento
-├── migrate_packs.php      # Script de migración DB
-├── sitemap.xml            # Sitemap SEO
+├── sitemap/               # Sitemap SEO (XML, XSL y generador)
 ├── manifest.json          # PWA Manifest
-├── sw.js                  # Service Worker PWA
 └── README.md
 ```
 

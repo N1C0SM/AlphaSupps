@@ -1,2 +1,25 @@
-/.DS_Store
-/.env
+# macOS
+.DS_Store
+
+# Entornos y secretos
+.env
+.env.local
+.env.*.local
+
+# Editores
+.vscode/
+.idea/
+
+# Dependencias
+vendor/
+node_modules/
+
+# Cachés y logs
+cache/
+*.log
+performance/*.log
+
+# Artefactos de build
+dist/
+coverage/
+tmp/

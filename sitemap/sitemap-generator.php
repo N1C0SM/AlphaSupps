@@ -1,6 +1,7 @@
 <?php
-require_once './models/supplement.php';
-require_once './models/post.php';
+$projectRoot = dirname(__DIR__);
+require_once $projectRoot . '/models/supplement.php';
+require_once $projectRoot . '/models/post.php';
 
 function generateSitemap() {
     $baseUrl = 'https://alphasupps.alwaysdata.net';
@@ -64,7 +65,7 @@ function generateSitemap() {
 }
 
 $sitemapContent = generateSitemap();
-file_put_contents('sitemap.xml', $sitemapContent);
+file_put_contents(__DIR__ . '/sitemap.xml', $sitemapContent);
 
 echo "Sitemap generado exitosamente con " . substr_count($sitemapContent, '<url>') . " URLs.\n";
 ?>

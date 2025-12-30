@@ -132,7 +132,7 @@ if (file_exists('../includes/image-optimizer.php')) {
 echo "<h2>10. Progressive Web App</h2>";
 $pwaFiles = [
     '../manifest.json',
-    '../sw.js',
+    '../js/sw.js',
     '../images/icon-192x192.png',
     '../images/icon-512x512.png'
 ];

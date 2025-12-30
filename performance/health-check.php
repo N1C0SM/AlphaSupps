@@ -105,7 +105,7 @@ echo "<div class='health-card'>";
 echo "<h2>⚡ Optimizaciones</h2>";
 $optimizations = [
     'CSS crítico en head.php' => strpos(file_get_contents('../components/head.php'), '--accent:') !== false,
-    'Sistema PWA' => file_exists('../manifest.json') && file_exists('../sw.js'),
+    'Sistema PWA' => file_exists('../manifest.json') && file_exists('../js/sw.js'),
     'Optimización de imágenes' => file_exists('../includes/image-optimizer.php'),
     'SEO configurado' => file_exists('../config/seo.php')
 ];
