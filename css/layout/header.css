@@ -1,0 +1,125 @@
+/* ============================================
+   HEADER - ESTILOS PRINCIPALES
+   Navegación y barra superior
+============================================ */
+
+header {
+  background: var(--bg-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  gap: var(--gap-lg);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Navegación principal */
+nav {
+  display: flex;
+  gap: var(--gap-lg);
+  align-items: center;
+}
+
+nav a {
+  color: var(--text);
+  font-weight: 500;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  position: relative;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width var(--transition);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Carrito y utilidades */
+.header-utils {
+  display: flex;
+  gap: var(--gap-md);
+  align-items: center;
+}
+
+.cart-btn,
+.search-btn,
+.user-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 1.25rem;
+  transition: all var(--transition);
+  position: relative;
+}
+
+.cart-btn:hover,
+.search-btn:hover,
+.user-btn:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+/* Badge del carrito */
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--accent);
+  color: var(--primary);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Animación del carrito */
+@keyframes cartBump {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.cart-btn.bump {
+  animation: cartBump 0.4s ease-out;
+}

@@ -1,0 +1,53 @@
+{
+  "name": "AlphaSupps - Suplementos Premium",
+  "short_name": "AlphaSupps",
+  "description": "Tienda de suplementos AlphaSupps: calidad y ciencia para tu rendimiento. Suplementos seleccionados de marcas líderes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9f9f9",
+  "theme_color": "#e0b94d",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "es-ES",
+  "categories": ["shopping", "health", "fitness"],
+  "icons": [
+    {
+      "src": "/images/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Productos",
+      "short_name": "Productos",
+      "description": "Ver todos los suplementos disponibles",
+      "url": "/supplements",
+      "icons": [
+        {
+          "src": "/images/icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Carrito",
+      "short_name": "Carrito",
+      "description": "Ver mi carrito de compras",
+      "url": "/cart",
+      "icons": [
+        {
+          "src": "/images/icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

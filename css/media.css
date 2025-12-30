@@ -1,0 +1,285 @@
+@media (max-width: 768px) {
+  .footer-container, .footer-col, .brand{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .footer-col > ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-col > p{
+    text-align: center;
+  }
+
+
+  .hero {
+    padding: 60px 15px;
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .cta-btn {
+      padding: 0.8rem 1.6rem;
+      font-size: 0.95rem;
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .hero-img {
+    order: -1;
+  }
+
+  .story-section {
+    padding: 50px 15px;
+
+    .two-col {
+      text-align: center;
+      display: flex;
+    flex-direction: column;
+    }
+
+    img {
+      order: -1;
+    }
+
+    p {
+      max-width: 100%;
+    }
+  }
+
+  .story-cta {
+    padding: 70px 15px;
+  }
+
+  /* === TEXTOS === */
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  .cookie-consent {
+    left: 0.6rem;
+    right: 0.6rem;
+    bottom: 0.6rem;
+  }
+
+  .checkout-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 30px auto;
+  }
+
+  .cart-list,
+  .checkout-panel {
+    padding: 25px 20px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .item-controls {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .item-subtotal {
+    text-align: left;
+  }
+
+  .checkout-panel h3 {
+    font-size: 1.3rem;
+  }
+
+  .checkout-btn {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .cart-list h2 {
+    font-size: 1.4rem;
+  }
+
+  .item-name {
+    font-size: 0.9rem;
+  }
+
+  .item-price {
+    font-size: 0.85rem;
+  }
+
+  /* === ADMIN SIDEBAR === */
+  .admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    border-bottom: 2px solid var(--accent);
+    background: var(--dark-bg-alt);
+
+    a {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* === ADMIN DASHBOARD === */
+  main.admin-dashboard {
+    margin-left: 0;
+    margin-top: 80px;
+    padding: 1.5rem;
+
+    h1 {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    .admin-form.table-style .form-row {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    table {
+      font-size: 0.8rem;
+
+      thead {
+        display: none;
+      }
+
+      tbody tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 0.8rem;
+      }
+
+      tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+
+        &::before {
+          content: attr(data-label);
+          font-weight: 600;
+          color: var(--accent);
+        }
+      }
+    }
+
+    .btn {
+      width: 100%;
+      text-align: center;
+      padding: 0.8rem;
+      max-width: 350px;
+    }
+
+    .admin-alert {
+      font-size: 0.85rem;
+      padding: 0.8rem;
+    }
+
+    .card {
+      padding: 1rem;
+    }
+
+    .benefits {
+      flex-direction: column;
+    }
+
+    .benefit {
+      flex: 1 1 100%;
+    }
+  }
+
+  /* === BLOG PAGE === */
+  main.blog-page {
+    padding: 40px 15px;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+
+  /* === SUPLEMENT PAGE === */
+  .suplement-page .product-container {
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+  }
+
+  .suplement-page .product-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .suplement-page .product-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .suplement-page .cta-btn,
+  .suplement-page .whatsapp button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .filters {
+    gap: 10px;
+
+    button {
+      padding: 8px 14px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .cards {
+    gap: 15px;
+  }
+
+  .card-body {
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}

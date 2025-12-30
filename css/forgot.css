@@ -1,0 +1,335 @@
+/* ============================================
+   FORGOT PASSWORD — Estilo Base Consistente con Home
+   ============================================ */
+
+/* Usa el mismo estilo base que la home */
+main.home {
+  background: var(--bg-dark);
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+main.home .hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: radial-gradient(circle at center, rgba(240,199,94,0.12), transparent),
+              var(--bg-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+main.home .hero h2 {
+  font-size: 2.6rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+main.home .hero p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: var(--text-light);
+  font-size: 1.15rem;
+}
+
+/* ===========================
+   LOGIN CARD (mismo estilo que login)
+=========================== */
+
+.login-card {
+  background: var(--bg-panel);
+  backdrop-filter: blur(20px);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 3rem;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: 2rem auto;
+  transition: var(--transition);
+}
+
+.login-card:hover {
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-2px);
+}
+
+.login-card h2 {
+  color: var(--accent);
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+/* ===========================
+   FORMULARIOS
+=========================== */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.login-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.login-form input[type="email"],
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 0;
+  border-radius: var(--radius);
+  border: var(--border);
+  background: var(--bg-light);
+  backdrop-filter: blur(10px);
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.login-form input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.login-form input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: var(--shadow-gold);
+  background: var(--bg-panel);
+  transform: translateY(-2px);
+}
+
+.login-form input:hover {
+  border-color: var(--color-border);
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+
+.cta-btn,
+button[type="submit"] {
+  width: 100%;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  padding: 1.2rem 2rem;
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-gold);
+}
+
+.cta-btn:hover,
+button[type="submit"]:hover {
+  background: var(--accent-light);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-gold-hover);
+}
+
+.cta-btn:active,
+button[type="submit"]:active {
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   MENSAJES
+=========================== */
+
+.login-success,
+.mensaje {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  animation: slideIn 0.5s ease-out;
+  backdrop-filter: blur(10px);
+}
+
+.login-success {
+  background: rgba(224, 185, 77, 0.1);
+  border: 1px solid rgba(224, 185, 77, 0.3);
+  color: var(--accent);
+  box-shadow: var(--shadow-gold);
+}
+
+.mensaje {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #3b82f6;
+}
+
+/* ===========================
+   ENLACES
+=========================== */
+
+.login-link {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.login-link a,
+.volver {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  position: relative;
+  display: inline-block;
+}
+
+.login-link a::after,
+.volver::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  transition: width 0.3s ease;
+}
+
+.login-link a:hover,
+.volver:hover {
+  color: var(--accent-light);
+  transform: translateY(-1px);
+}
+
+.login-link a:hover::after,
+.volver:hover::after {
+  width: 100%;
+}
+
+/* ===========================
+   BENEFICIOS (estilo why-item)
+=========================== */
+
+.benefits {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: var(--bg-panel);
+  backdrop-filter: blur(15px);
+  border: var(--border);
+  border-radius: var(--radius);
+  animation: slideUp 1s ease-out 0.3s both;
+}
+
+.benefits h3 {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.benefits > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.benefits > div > div {
+  padding: 1.5rem;
+  background: var(--bg-panel);
+  border-radius: var(--radius);
+  border: var(--border);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.benefits > div > div:hover {
+  transform: translateY(-3px);
+  background: var(--bg-light);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-gold);
+}
+
+.benefits > div > div > div:first-child {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  filter: drop-shadow(0 2px 4px rgba(224, 185, 77, 0.3));
+}
+
+.benefits > div > div strong {
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  display: block;
+}
+
+/* ===========================
+   ANIMACIONES
+=========================== */
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+  main.home .hero h2 {
+    font-size: 2rem;
+  }
+
+  .login-card {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+
+  .benefits > div {
+    grid-template-columns: 1fr;
+  }
+}

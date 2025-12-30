@@ -1,0 +1,138 @@
+main.post-page {
+  font-family: var(--font);
+  background: linear-gradient(160deg, var(--dark-bg), var(--bg-light));
+  color: var(--text);
+  line-height: 1.8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 100px 20px 80px;
+  position: relative;
+  overflow: hidden;
+
+  /* 🌟 Glow dorado sutil de fondo */
+  &::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(240,199,94,0.12) 0%, transparent 70%);
+    filter: blur(60px);
+    z-index: 0;
+  }
+
+  /* === POST === */
+  .post {
+    background: rgba(26, 26, 26, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 50px;
+    border-radius: var(--radius);
+    max-width: 850px;
+    width: 100%;
+    box-shadow: var(--shadow-gold);
+    border: 1px solid rgba(240,199,94,0.15);
+    transition: all var(--transition);
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-gold-hover);
+    }
+
+    /* === BOTÓN VOLVER === */
+    .back-btn {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-decoration: none;
+      transition: all var(--transition);
+      font-size: 1rem;
+      letter-spacing: 0.3px;
+
+      &:hover {
+        color: var(--text);
+        transform: translateX(-4px);
+      }
+    }
+
+    /* === TÍTULO === */
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      color: var(--accent);
+      margin-bottom: 25px;
+      text-align: center;
+      letter-spacing: 0.8px;
+      text-shadow: 0 0 12px rgba(240,199,94,0.25);
+      line-height: 1.3;
+    }
+
+    /* === IMAGEN PRINCIPAL === */
+    img {
+      width: 100%;
+      border-radius: var(--radius);
+      margin-bottom: 35px;
+      box-shadow: var(--shadow);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+      &:hover {
+        transform: scale(1.03);
+        box-shadow: var(--shadow-gold-hover);
+      }
+    }
+
+    /* === TEXTO === */
+    p {
+      color: var(--text-light);
+      font-size: 1.08rem;
+      margin-bottom: 22px;
+      text-align: justify;
+      letter-spacing: 0.2px;
+      transition: color var(--transition);
+
+      strong {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      &:hover {
+        color: var(--text);
+      }
+    }
+  }
+
+  /* === FOOTER === */
+  footer {
+    background: var(--dark-bg-alt);
+    color: var(--text-muted);
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--bg-light);
+    margin-top: 60px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 768px) {
+    padding: 60px 15px;
+
+    .post {
+      padding: 30px;
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

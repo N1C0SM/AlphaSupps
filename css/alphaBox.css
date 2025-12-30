@@ -1,0 +1,198 @@
+/* ===========================
+   ALPHABOX PAGE
+=========================== */
+
+.alphabox-page {
+    background: var(--dark-bg);
+    color: var(--text);
+    padding-bottom: 4rem;
+  }
+
+
+
+  /* WHY GRID */
+  .alphabox-page .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .alphabox-page .why-item {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+  }
+
+  .alphabox-page .why-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-gold);
+  }
+
+  .alphabox-page .why-item .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .alphabox-page .why-item h3 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .alphabox-page .why-item p {
+    color: var(--text-muted);
+  }
+
+  /* PLANS SECTION */
+  .pricing {
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .pricing h2 {
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+
+  /* PLANS GRID */
+  .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+
+  /* PLAN CARD */
+  .plan {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+
+  .plan:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-gold);
+  }
+
+  .plan h3 {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .plan p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .plan .price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 1rem 0;
+  }
+
+  /* CTA BUTTON */
+.plan .cta-btn {
+    padding: 10px 25px;
+    border-radius: 50px;
+    background: var(--accent);
+    color: #000;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+  }
+
+  .plan .cta-btn:hover {
+    background: var(--accent-light);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-gold-hover);
+  }
+
+  /* INTEREST FORM */
+  .interest-box {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--bg-light);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .interest-box h2 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+  .interest-box .section-hint {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  /* COMPARISON */
+  .comparison {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+  .comparison-card {
+    background: var(--bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+  }
+  .comparison-card h3 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+  .comparison-card ul {
+    padding-left: 1.2rem;
+    margin: 0.5rem 0 0;
+    color: var(--text-muted);
+  }
+  .interest-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .interest-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  .interest-form input,
+  .interest-form select,
+  .interest-form textarea {
+    background: var(--bg-dark);
+    color: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+  .interest-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+  .interest-form .full-width {
+    width: 100%;
+  }
+  .interest-form .submit-btn {
+    align-self: flex-start;
+  }
+  .form-status {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .form-status.pending { color: var(--text-muted); }
+  .form-status.success { color: #6ee7b7; }
+  .form-status.error { color: #f87171; }

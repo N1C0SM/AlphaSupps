@@ -1,0 +1,89 @@
+/* ============================================
+   BÚSQUEDA - FUNCIONALIDAD
+   Barra de búsqueda y resultados
+============================================ */
+
+.search-bar {
+  display: flex;
+  gap: var(--spacing-sm);
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-input {
+  flex: 1;
+  padding: var(--spacing-md);
+  background: var(--bg-dark);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 1rem;
+  transition: all var(--transition);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(240, 199, 94, 0.1);
+}
+
+.search-btn {
+  background: var(--accent);
+  color: var(--primary);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.search-btn:hover {
+  background: var(--accent-dark);
+  transform: scale(1.05);
+}
+
+/* Dropdown de resultados */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0 0 var(--radius) var(--radius);
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 100;
+  display: none;
+}
+
+.search-results.active {
+  display: block;
+}
+
+.search-result-item {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.search-result-item:hover {
+  background: rgba(240, 199, 94, 0.1);
+}
+
+.search-result-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.search-result-category {
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.search-result-price {
+  font-weight: 700;
+  color: var(--accent);
+}

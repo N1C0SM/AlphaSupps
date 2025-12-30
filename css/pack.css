@@ -1,0 +1,216 @@
+/* PACK IGUAL QUE SUPPLEMENT — HORIZONTAL */
+
+.pack-viewport {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    padding: 40px;
+    margin: auto;
+    min-height: calc(100vh - 160px);
+  }
+
+  /* Imagen igual que suplemento */
+  .pack-image img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  /* Info */
+  .pack-info {
+    max-width: 550px;
+  }
+
+  /* Títulos */
+  .pack-info h1 {
+    font-size: 2.4rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+  }
+
+  /* Beneficios */
+  .benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    line-height: 1.55;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .benefit-list li {
+    margin-bottom: 0.6rem;
+  }
+
+  /* Descripción */
+  .description {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    line-height: 1.55;
+  }
+
+  /* Confianza */
+  .trust-box {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+
+  .trust-box span {
+    background: var(--bg-panel);
+    padding: 7px 14px;
+    border-radius: 12px;
+    color: var(--accent);
+    box-shadow: var(--shadow);
+  }
+
+  /* Precio */
+  .price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 25px;
+  }
+
+  /* Botones */
+  .buy-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+  }
+
+  .btn-add-cart {
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: .25s;
+    background: #ffffff15;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    cursor: pointer;
+  }
+
+  .btn-add-cart:hover {
+    background: var(--accent);
+    color: #000;
+  }
+
+  .btn-buy-now {
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: .25s;
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    cursor: pointer;
+  }
+
+  .btn-buy-now:hover {
+    background: #e3c46f;
+    transform: translateY(-2px);
+  }
+
+  /* Suscripción (igual que suplemento) */
+  .subscribe-box {
+    margin-top: 25px;
+    background: var(--bg-panel);
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--bg-light);
+  }
+
+  /* Responsive igual que suplemento */
+  @media(max-width: 1100px) {
+    .pack-viewport {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .pack-image img {
+      width: 360px;
+      height: 360px;
+    }
+
+    .buy-buttons {
+      justify-content: center;
+    }
+  }
+.product-gallery{display:flex;flex-direction:column;gap:14px}
+.gallery-main{position:relative;background:#111;border-radius:20px;min-height:320px;display:flex;align-items:center;justify-content:center}
+.gallery-main img{width:100%;max-height:460px;object-fit:contain;padding:14px}
+.gallery-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.15);color:#fff;font-size:1.4rem;cursor:pointer}
+.gallery-arrow.prev{left:12px}
+.gallery-arrow.next{right:12px}
+.thumbnail-gallery{display:flex;gap:10px;overflow-x:auto}
+.thumbnail{width:82px;height:82px;border-radius:12px;object-fit:cover;cursor:pointer;opacity:.6;border:2px solid transparent}
+.thumbnail.active{opacity:1;border-color:var(--accent)}
+
+.product-rating{display:flex;align-items:center;gap:10px;margin:14px 0 20px}
+.rating-star{background:none;border:none;font-size:22px;color:#555;cursor:pointer}
+.rating-star.active,.rating-star:hover{color:var(--accent)}
+.rating-meta{font-size:14px;color:var(--text-muted)}
+.rating-value{font-weight:700;color:var(--text)}
+
+.product-features-benefits{display:grid;gap:22px;margin-top:28px}
+.product-features-benefits>div{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(0,0,0,.35));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px}
+.product-features-benefits h4{color:var(--accent);margin-bottom:14px}
+.product-features-benefits ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.product-features-benefits li{background:rgba(0,0,0,.35);padding:10px 12px;border-radius:10px}
+
+.studies-section{margin-top:40px;padding:22px;background:var(--card);border-radius:18px}
+.studies-section h4{color:var(--accent);margin-bottom:16px}
+.studies-section ul{list-style:none;padding:0;margin:0}
+.studies-section li{margin-bottom:16px;padding-left:12px;border-left:3px solid var(--accent)}
+.studies-section li strong{color:var(--text);font-size:1rem}
+.studies-section li span{color:var(--text-muted);font-size:.95rem}
+
+.purchase-buttons{display:flex;gap:12px;margin-top:18px}
+.cta-btn{padding:14px 18px;border-radius:14px;font-size:1rem;font-weight:600;cursor:pointer;border:none;transition:transform .15s ease,box-shadow .15s ease}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+
+.subscription-block{
+  margin-top:25px;
+  background:var(--bg-panel);
+  padding:1rem;
+  border-radius:var(--radius);
+  border:1px solid var(--bg-light);
+
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.subscription-switch{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:700;
+}
+
+.subscription-switch input{
+  width:18px;
+  height:18px;
+}
+
+.subscription-details{
+  display:none;
+  gap:8px;
+  align-items:center;
+  flex-wrap:wrap;
+  padding-left:28px;
+}
+
+.subscription-details.active{
+  display:flex;
+}
+
+.subscription-price{
+  color:var(--accent);
+  font-weight:800;
+}

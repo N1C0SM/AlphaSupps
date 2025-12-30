@@ -1,0 +1,197 @@
+/* ============================================
+   ALPHASUPPS CSS VARIABLES — Sistema Unificado
+   Todas las variables de la aplicación en un solo lugar
+============================================ */
+
+:root {
+  margin-left: 220px;
+  width: calc(100% - 220px);
+  padding: 40px 40px 60px;
+  animation: fadeIn .7s ease;
+  --bg: #0c0c0d;
+  --bg-2: #111113;
+  --bg-card: rgba(255,255,255,0.04);
+  --bg-card-soft: rgba(255,255,255,0.07);
+  --bg-hover: rgba(255,255,255,0.09);
+
+  --text: #f2f2f2;
+  --text-soft: #b3b3b3;
+  --text-faint: #7d7d7d;
+
+  --accent: #e7c65c;
+  --accent-strong: #f5cf3e;
+  --accent-soft: rgba(231,198,92,0.25);
+
+  --success: #4ade80;
+  --success-soft: rgba(74,222,128,0.2);
+
+  --danger: #ef4444;
+  --danger-soft: rgba(239,68,68,0.2);
+
+  --warning: #f59e0b;
+  --warning-soft: rgba(245,158,11,0.22);
+
+  --border: rgba(255,255,255,0.12);
+  --radius: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --shadow: 0 4px 22px rgba(0,0,0,0.25);
+  --transition: .25s cubic-bezier(.33,1,.68,1);
+  --transition-fast: .18s ease;
+  /* 🎨 PALETA DE COLORES PRIMARIA */
+  --primary-gold: #e0b94d;
+  --primary-gold-light: #f4c842;
+  --primary-gold-dark: #d4a73d;
+  --primary-gold-hover: #c4993a;
+
+  /* 🌙 BACKGROUNDS */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  --bg-panel: rgba(255, 255, 255, 0.05);
+  --bg-panel-hover: rgba(255, 255, 255, 0.08);
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-input: rgba(255, 255, 255, 0.05);
+  --bg-overlay: rgba(0, 0, 0, 0.7);
+  --bg-glass: rgba(255, 255, 255, 0.1);
+
+  /* 📝 TEXTOS */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.9);
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --text-light: rgba(255, 255, 255, 0.7);
+  --text-dark: #000000;
+  --text-gold: #e0b94d;
+
+  /* 🔗 BORDES Y SOMBRAS */
+  --border-primary: rgba(224, 185, 77, 0.2);
+  --border-hover: rgba(224, 185, 77, 0.4);
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-gold: rgba(224, 185, 77, 0.5);
+  --shadow-primary: 0 8px 25px rgba(0, 0, 0, 0.3);
+  --shadow-gold: 0 0 20px rgba(224, 185, 77, 0.1);
+  --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.4);
+  --shadow-inner: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+  /* 📏 ESPACIADO Y DIMENSIONES */
+  --radius: 16px;
+  --radius-large: 24px;
+  --radius-small: 8px;
+  --radius-round: 50px;
+  --border-width: 2px;
+  --border-width-thin: 1px;
+
+  /* ⏱️ TRANSICIONES */
+  --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: all 0.15s ease;
+  --transition-slow: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* 🔤 TIPOGRAFÍA */
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-secondary: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* 📏 TAMAÑOS DE TEXTO */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* 📏 ESPACIAMIENTO */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* 📏 ANCHOS Y ALTOS */
+  --width-xs: 20rem;
+  --width-sm: 24rem;
+  --width-md: 28rem;
+  --width-lg: 32rem;
+  --width-xl: 36rem;
+  --width-2xl: 42rem;
+  --width-3xl: 48rem;
+  --width-4xl: 56rem;
+  --width-5xl: 64rem;
+  --width-6xl: 72rem;
+  --width-7xl: 80rem;
+  --width-full: 100%;
+
+  /* 🎯 Z-INDEX */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+
+  /* 🎨 GRADIENTES */
+  --gradient-primary: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-light) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  --gradient-text: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-light) 100%);
+
+  /* 💫 ANIMACIONES */
+  --animation-fade-in: fadeIn 0.6s ease-out;
+  --animation-slide-up: slideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --animation-bounce: bounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --animation-pulse: pulse 2s infinite;
+
+  /* 📱 BREAKPOINTS */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* 🎯 ESTADOS */
+  --state-hover-transform: translateY(-2px);
+  --state-active-transform: translateY(0);
+  --state-focus-shadow: 0 0 0 3px rgba(224, 185, 77, 0.3);
+}
+
+/* 🎭 VARIACIONES DE TEMA */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6a6a6a;
+}
+
+
+/* ♿ PREFERENCIAS DE ACCESIBILIDAD */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition: none;
+    --transition-fast: none;
+    --transition-slow: none;
+    --transition-bounce: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  :root {
+    --border-primary: rgba(224, 185, 77, 0.6);
+    --text-secondary: var(--text-primary);
+    --text-muted: var(--text-secondary);
+  }
+}

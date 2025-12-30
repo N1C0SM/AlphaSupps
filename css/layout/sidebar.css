@@ -1,0 +1,104 @@
+/* ============================================
+   SIDEBAR - ESTILOS PRINCIPALES
+   Barra lateral y filtros
+============================================ */
+
+.sidebar {
+  background: var(--bg-surface);
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+  height: fit-content;
+  position: sticky;
+  top: calc(var(--header-height, 70px) + var(--spacing-md));
+}
+
+.sidebar-section {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.sidebar-title {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.1rem;
+}
+
+/* Filtros */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+}
+
+.filter-item:hover {
+  background: rgba(240, 199, 94, 0.1);
+}
+
+.filter-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.filter-item label {
+  cursor: pointer;
+  flex: 1;
+}
+
+/* Rango de precios */
+.price-range {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.price-range input {
+  flex: 1;
+  padding: var(--spacing-sm);
+  background: var(--bg-dark);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  color: var(--text);
+}
+
+.price-range input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* Botón limpiar filtros */
+.clear-filters {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: var(--spacing-md);
+  border-radius: var(--radius);
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: all var(--transition);
+  margin-top: var(--spacing-lg);
+}
+
+.clear-filters:hover {
+  background: var(--accent);
+  color: var(--primary);
+}

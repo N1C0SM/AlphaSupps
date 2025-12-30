@@ -1,0 +1,119 @@
+/* ============================================
+   COMPONENTE BUTTON — Sistema Unificado
+   ============================================ */
+
+.btn,
+.button {
+  /* Posicionamiento */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Dimensiones */
+  height: var(--button-height);
+  padding: 0 var(--space-md);
+
+  /* Bordes */
+  border: none;
+  border-radius: var(--radius-sm);
+
+  /* Colores */
+  background-color: var(--color-primary);
+  color: var(--color-black);
+
+  /* Tipografía */
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  line-height: 1;
+  text-decoration: none;
+
+  /* Interacción */
+  cursor: pointer;
+  transition: var(--transition-normal);
+
+  /* Estados */
+  &:hover {
+    background-color: var(--color-primary-light);
+    transform: var(--state-hover-transform);
+  }
+
+  &:active {
+    transform: var(--state-active-transform);
+  }
+
+  &:focus-visible {
+    box-shadow: var(--state-focus-shadow);
+  }
+
+  /* Variantes */
+  &.btn--secondary {
+    background-color: var(--color-surface-alt);
+    color: var(--color-text);
+  }
+
+  &.btn--outline {
+    background-color: transparent;
+    border: var(--border-width) solid var(--color-border);
+    color: var(--color-text);
+
+    &:hover {
+      background-color: var(--color-surface-alt);
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+  }
+
+  &.btn--large {
+    height: 52px;
+    padding: 0 var(--space-lg);
+    font-size: var(--text-base);
+  }
+
+  &.btn--small {
+    height: 36px;
+    padding: 0 var(--space-sm);
+    font-size: var(--text-xs);
+  }
+
+  /* Estados funcionales */
+  &.btn--loading {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  &.btn--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+.green {
+  background-color: #25d366;
+  color: var(--text);
+}
+.btn-danger{
+  background-color:#e63946; color:white; border:none; padding:6px 12px; border-radius:6px; cursor:pointer;
+}
+.btn-warning{
+background-color: rgb(224, 185, 77); color:black; border:none; padding:6px 12px; border-radius:6px; cursor:pointer;
+}
+.cta-btn.big {
+  padding: 12px 28px;
+  border-radius: 50px;
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  transition: 0.25s ease;
+
+  &:hover:not(.disabled) {
+    background: var(--accent-light);
+    transform: scale(1.05);
+  }
+}
+
+.disabled {
+  opacity: .5;
+  pointer-events: none;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Error | AlphaSupps</title>
+
+  <style>
+    :root{
+      --accent:#c9a24d;
+      --gold:#e6c875;
+      --text:#1f1f1f;
+      --muted:#666;
+      --bg:#f8f8f8;
+      --panel:#ffffff;
+      --border:#e5e5e5;
+      --shadow:0 4px 15px rgba(0,0,0,.08);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    main{
+      max-width:1200px;
+      margin:0 auto;
+      padding:70px 20px;
+      text-align:center;
+    }
+
+    .icon{
+      font-size:80px;
+      margin-bottom:20px;
+      animation:bounce 2s infinite;
+    }
+
+    @keyframes bounce{
+      0%,20%,50%,80%,100%{transform:translateY(0)}
+      40%{transform:translateY(-10px)}
+      60%{transform:translateY(-5px)}
+    }
+
+    .code{
+      font-size:96px;
+      font-weight:900;
+      color:var(--accent);
+      margin-bottom:10px;
+    }
+
+    h1{
+      font-size:36px;
+      margin-bottom:15px;
+    }
+
+    .desc{
+      max-width:600px;
+      margin:0 auto 40px;
+      font-size:17px;
+      line-height:1.6;
+      color:var(--muted);
+    }
+
+    .actions{
+      display:flex;
+      gap:20px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-bottom:60px;
+    }
+
+    .btn{
+      padding:12px 24px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    .btn-primary{
+      background:var(--accent);
+      color:#fff;
+    }
+
+    .btn-primary:hover{
+      background:var(--gold);
+      transform:translateY(-2px);
+    }
+
+    .btn-secondary{
+      border:2px solid var(--accent);
+      color:var(--accent);
+    }
+
+    .btn-secondary:hover{
+      background:var(--accent);
+      color:#fff;
+    }
+
+    .products{
+      margin-top:60px;
+      padding-top:40px;
+      border-top:1px solid var(--border);
+    }
+
+    .products h3{
+      font-size:26px;
+      margin-bottom:30px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:var(--panel);
+      border-radius:12px;
+      padding:20px;
+      box-shadow:var(--shadow);
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 25px rgba(0,0,0,.15);
+    }
+
+    .img{
+      height:140px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:15px;
+    }
+
+    .img img{
+      max-width:100%;
+      max-height:100%;
+      object-fit:contain;
+    }
+
+    .card h4{
+      font-size:18px;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:15px;
+    }
+
+    .btn-small{
+      background:var(--accent);
+      color:#fff;
+      padding:8px 16px;
+      border-radius:6px;
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    @media(max-width:768px){
+      .code{font-size:72px}
+      h1{font-size:28px}
+    }
+  </style>
+</head>
+
+<body>
+
+<main>
+  <div class="icon">🚫</div>
+  <div class="code" id="code">404</div>
+  <h1 id="title">Página no encontrada</h1>
+  <p class="desc" id="desc"></p>
+
+  <div class="actions">
+    <a href="/" class="btn btn-primary">🏠 Ir al inicio</a>
+    <a href="/views/supplements.php" class="btn btn-secondary">💪 Ver suplementos</a>
+  </div>
+
+  <section class="products" id="products">
+    <h3>Productos destacados</h3>
+    <div class="grid">
+      <div class="card">
+        <div class="img">
+          <img src="/images/products/whey.webp" alt="Proteína Whey">
+        </div>
+        <h4>Proteína Whey</h4>
+        <p>Alta calidad para el desarrollo muscular</p>
+        <a href="/views/supplement.php?id=1" class="btn-small">Ver producto</a>
+      </div>
+
+      <div class="card">
+        <div class="img">
+          <img src="/images/products/creatine.webp" alt="Creatina">
+        </div>
+        <h4>Creatina</h4>
+        <p>Mejora fuerza y rendimiento</p>
+        <a href="/views/supplement.php?id=2" class="btn-small">Ver producto</a>
+      </div>
+
+      <div class="card">
+        <div class="img">
+          <img src="/images/products/omega.webp" alt="Omega 3">
+        </div>
+        <h4>Omega 3</h4>
+        <p>Salud cardiovascular y bienestar</p>
+        <a href="/views/supplement.php?id=3" class="btn-small">Ver producto</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  const code = (document.title.match(/\d+/)||[])[0] || '404';
+
+  const map = {
+    400:{t:'Solicitud incorrecta',d:'La petición enviada no es válida.'},
+    403:{t:'Acceso prohibido',d:'No tienes permisos para acceder a esta página.'},
+    404:{t:'Página no encontrada',d:'La página que buscas no existe o ha sido movida.'},
+    410:{t:'Contenido eliminado',d:'Esta página ha sido eliminada de forma permanente.'},
+    429:{t:'Demasiadas solicitudes',d:'Has realizado demasiadas peticiones en poco tiempo.'},
+    500:{t:'Error interno del servidor',d:'Ha ocurrido un problema en el servidor.'},
+    502:{t:'Error de comunicación',d:'Respuesta inválida del servidor.'},
+    503:{t:'Servicio no disponible',d:'Estamos en mantenimiento. Vuelve en unos minutos.'}
+  };
+
+  const data = map[code] || map[404];
+  document.getElementById('code').textContent = code;
+  document.getElementById('title').textContent = data.t;
+  document.getElementById('desc').textContent = data.d;
+
+  // Solo mostrar productos en errores de navegación
+  if(!['404','410'].includes(code)){
+    document.getElementById('products').style.display='none';
+  }
+})();
+</script>
+
+</body>
+</html>

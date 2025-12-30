@@ -1,0 +1,82 @@
+/* ============================================
+   PALETA DE COLORES GLOBAL
+   Definición de colores, gradientes y temas
+============================================ */
+
+:root {
+  /* Colores principales */
+  --primary: #111111;
+  --secondary: #f0c75e;
+  --accent: #f0c75e;
+  --accent-dark: #d4a844;
+
+  /* Colores neutrales */
+  --white: #ffffff;
+  --black: #000000;
+  --gray-50: #f9f9f9;
+  --gray-100: #f0f0f0;
+  --gray-200: #e0e0e0;
+  --gray-300: #d0d0d0;
+  --gray-400: #999999;
+  --gray-500: #666666;
+  --gray-600: #444444;
+  --gray-700: #333333;
+  --gray-800: #222222;
+  --gray-900: #111111;
+
+  /* Estados */
+  --success: #27ae60;
+  --warning: #f39c12;
+  --danger: #e74c3c;
+  --info: #3498db;
+
+  /* Fondos */
+  --bg-dark: #0a0a0a;
+  --bg-light: #f5f5f5;
+  --bg-surface: #1a1a1a;
+}
+
+/* Gradientes */
+.gradient-accent {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+}
+
+.gradient-light {
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+}
+
+/* Sobreposiciones */
+.overlay {
+  position: relative;
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Modo oscuro (si se implementa) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #f0f0f0;
+    --text-light: #b0b0b0;
+    --bg: #0a0a0a;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #111111;
+    --text-light: #666666;
+    --bg: #ffffff;
+  }
+}

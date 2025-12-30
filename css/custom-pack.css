@@ -1,0 +1,375 @@
+/* ============================================
+   ANIMACIONES BASE
+   ============================================ */
+   @keyframes fadeSlide {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+    0% { transform: scale(0.95); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes addPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+@keyframes itemAppear {
+    0% { opacity: 0; transform: translateX(-10px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes saveGrow {
+    0% { transform: scale(1); box-shadow: none; }
+    40% { transform: scale(1.15); box-shadow: var(--shadow-gold); }
+    70% { transform: scale(1.05); }
+    100% { transform: scale(1); box-shadow: var(--shadow-gold-hover); }
+}
+
+@keyframes saveCheck {
+    0% { opacity: 0; transform: scale(0.3); }
+    70% { opacity: 1; transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 0 rgba(0,0,0,0); }
+    100% { box-shadow: var(--shadow-gold-hover); }
+}
+
+
+/* ============================================
+   LAYOUT PRINCIPAL
+   ============================================ */
+
+.custom-pack-page {
+    animation: fadeSlide .6s ease forwards;
+    padding-bottom: 60px;
+}
+
+/* HERO */
+.hero {
+    background: var(--bg-dark);
+    padding: 50px;
+    border-radius: var(--radius);
+    text-align: center;
+    margin-bottom: 40px;
+    border: var(--border);
+    animation: fadeSlide .7s ease forwards;
+}
+
+.hero h1 {
+    font-size: 38px;
+    color: var(--text);
+    font-weight: 900;
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--text-light);
+}
+
+/* ============================================
+   CONTENEDOR HORIZONTAL (PRODUCTOS + FORMULARIO)
+   ============================================ */
+
+.custom-pack-container {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* ============================================
+   GRID DE PRODUCTOS — IZQUIERDA
+   ============================================ */
+
+.supplements-grid {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+    gap: 25px;
+    animation: fadeSlide .8s ease forwards;
+}
+
+.product-card {
+    background: var(--bg-panel);
+    border-radius: var(--radius);
+    padding: 15px;
+    text-align: center;
+    border: var(--border);
+    transition: transform var(--transition), box-shadow var(--transition);
+    box-shadow: var(--shadow);
+    animation: pop .4s ease forwards;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-gold);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: calc(var(--radius) - 2px);
+    transition: transform var(--transition);
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    color: var(--text);
+}
+
+/* ============================================
+   BOTONES AÑADIR
+   ============================================ */
+
+.add-to-pack-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background: var(--accent);
+    color: var(--dark-bg);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 700;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.add-to-pack-btn:hover {
+    background: var(--accent-light);
+    animation: glow .4s forwards;
+}
+
+.add-to-pack-btn:active {
+    animation: addPulse .3s ease;
+}
+
+/* ============================================
+   PANEL RESUMEN — DERECHA
+   ============================================ */
+
+.pack-summary {
+    flex: 1;
+    background: var(--bg-panel);
+    border-radius: var(--radius);
+    padding: 20px;
+    border: var(--border);
+    box-shadow: var(--shadow);
+    animation: fadeSlide .9s ease forwards;
+    position: sticky;
+    top: 20px;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.pack-summary input,
+.pack-summary textarea,
+.pack-summary select {
+    width: 100%;
+    padding: 10px;
+    background: var(--bg-light);
+    border: var(--border);
+    color: var(--text);
+    border-radius: var(--radius);
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.pack-summary input:focus,
+.pack-summary textarea:focus,
+.pack-summary select:focus {
+    box-shadow: var(--shadow-gold);
+}
+
+/* ============================================
+   ÍTEMS AGREGADOS AL PACK
+   ============================================ */
+
+#selected-items li {
+    padding: 8px 0;
+    border-bottom: var(--border);
+    color: var(--text-light);
+    animation: itemAppear 0.35s ease forwards;
+}
+
+/* ============================================
+   BOTÓN GUARDAR PACK — ANIMACIÓN PREMIUM 💾✨
+   ============================================ */
+
+#save-pack-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: var(--dark-bg);
+    font-weight: 800;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 15px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+/* EFECTO AL HACER CLIC */
+#save-pack-btn.saving {
+    animation: saveGrow .6s ease forwards;
+}
+
+/* CHECK */
+#save-pack-btn.saving::after {
+    content: "✔";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: var(--dark-bg);
+    animation: saveCheck .6s ease forwards;
+    opacity: 1;
+}
+
+/* ============================================
+   RESPONSIVE — MÓVILES / TABLETS
+   ============================================ */
+
+@media (max-width: 900px) {
+    .custom-pack-container {
+        flex-direction: column;
+    }
+    .pack-summary {
+        position: static;
+        width: 100%;
+    }
+}
+/* ============================================
+   FORMULARIO PREMIUM
+   ============================================ */
+
+   .pack-summary {
+    flex: 1;
+    padding: 28px;
+    border-radius: 18px;
+
+    /* Fondo con profundidad */
+    background: linear-gradient(
+        145deg,
+        rgba(25, 25, 25, 0.9),
+        rgba(18, 18, 18, 0.9)
+    );
+
+    /* Borde premium suave */
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    /* Sombra elegante */
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.45),
+        inset 0 0 15px rgba(255, 255, 255, 0.03);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    animation: fadeSlide .9s ease forwards;
+    position: sticky;
+    top: 20px;
+}
+
+/* TÍTULO DEL PANEL */
+.pack-summary h2 {
+    color: var(--text);
+    font-size: 22px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* LABELS */
+.form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+/* INPUTS PREMIUM */
+.pack-summary input,
+.pack-summary textarea,
+.pack-summary select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text);
+    transition: 0.25s ease;
+
+    font-size: 14px;
+}
+
+.pack-summary input:hover,
+.pack-summary textarea:hover,
+.pack-summary select:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.pack-summary input:focus,
+.pack-summary textarea:focus,
+.pack-summary select:focus {
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 8px rgba(240, 199, 94, 0.4);
+}
+
+/* LISTA DE PRODUCTOS */
+#selected-items li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-light);
+    animation: itemAppear 0.35s ease forwards;
+}
+
+/* INFO DE PRECIOS */
+.pack-summary p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* BOTÓN DESHABILITADO */
+#add-pack-to-cart[disabled] {
+    opacity: 0.5;
+    background: rgba(255, 255, 255, 0.08);
+    cursor: not-allowed;
+}
+
+/* BOTÓN GUARDAR */
+#save-pack-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 14px;
+    font-weight: 800;
+    border-radius: 12px;
+    background: var(--accent);
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+}
+
+/* Animación premium que crece */
+#save-pack-btn.saving {
+    animation: saveGrow .6s ease forwards;
+}

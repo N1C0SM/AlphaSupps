@@ -1,0 +1,297 @@
+/* ================================
+   HEADER PREMIUM – ALPHASUPPS
+   Sistema Unificado con Variables Globales
+================================ */
+
+.main-header {
+  width: 100%;
+  background: var(--bg-primary);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-primary);
+  min-height: 72px;
+  padding: var(--space-4) 0;
+  position: sticky;
+  top: 0;
+  z-index: var(--z-fixed);
+  box-shadow: var(--shadow-primary);
+  transition: var(--transition);
+  isolation: isolate;
+  z-index: 100000000;
+}
+
+/* CONTAINER */
+.nav-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.logo .logo-icon {
+  width: 42px;
+  height: 42px;
+  filter: drop-shadow(0 2px 4px rgba(224, 185, 77, 0.3));
+}
+
+.logo .accent {
+  background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ================================
+   NAV LINKS (pc)
+================================ */
+
+#nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.3);
+}
+
+.nav-link.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ================================
+   USER INFO
+================================ */
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.user-name {
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.logout-btn {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+/* ADMIN LINK */
+.admin-link {
+  background: var(--accent);
+  padding: 5px 10px;
+  color: #000;
+  font-weight: 700;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: 0.2s;
+}
+
+.admin-link:hover {
+  transform: scale(1.05);
+}
+
+/* ================================
+   CARRITO PREMIUM
+================================ */
+
+.cart-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  width: 32px;
+  height: 32px;
+}
+
+.cart-btn .cart-icon {
+  width: 26px;
+  height: 26px;
+  stroke: var(--text-light);
+  display: block;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: var(--accent);
+  color: #000;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: 700;
+  min-width: 20px;
+  min-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-gold);
+}
+
+/* ================================
+   HAMBURGER
+================================ */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--text-light);
+}
+
+/* ================================
+   RESPONSIVE (MOBILE)
+================================ */
+
+@media (max-width: 780px) {
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--dark-bg-alt);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--accent);
+    box-shadow: var(--shadow);
+    gap: 1.4rem;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-link {
+    padding: 1rem 0;
+    font-size: 1.15rem;
+  }
+
+  .user-info {
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 1rem;
+  }
+
+  /* carrito más grande */
+  .cart-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .cart-btn .cart-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cart-count {
+    top: -4px;
+    right: -6px;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 450px) {
+  .logo {
+    font-size: 1.15rem;
+  }
+
+  .logo .logo-icon {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* ================================
+   SIDEBAR ADMIN
+================================ */
+
+.admin-sidebar {
+  width: 230px;
+  background: var(--dark-bg-alt);
+  height: 100vh;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  padding: 20px;
+  display: none;
+  box-shadow: var(--shadow);
+}
+
+.admin-sidebar.active {
+  display: block;
+}
+
+.admin-nav a {
+  display: block;
+  padding: 10px 0;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.admin-nav a:hover {
+  color: var(--accent);
+  transform: translateX(4px);
+}

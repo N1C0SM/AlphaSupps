@@ -1,0 +1,225 @@
+main.story-page {
+
+  /* -----------------------------------------
+     IMÁGENES — TODAS MISMO TAMAÑO PREMIUM
+  ----------------------------------------- */
+  .hero-img img,
+  .story-section img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: var(--border);
+    box-shadow: var(--shadow-gold);
+    background: radial-gradient(circle at center, var(--bg-light) 0%, var(--dark-bg) 100%);
+    filter: brightness(0.95) contrast(1.06) saturate(1.08);
+    transition: transform 0.45s ease,
+                box-shadow 0.45s ease,
+                filter 0.45s ease;
+  }
+
+  .hero-img img:hover,
+  .story-section img:hover {
+    transform: scale(1.04);
+    box-shadow: var(--shadow-gold-hover);
+    filter: brightness(1.05) contrast(1.12) saturate(1.15);
+  }
+
+
+  /* -----------------------------------------
+     HERO — SECCIÓN PRINCIPAL
+  ----------------------------------------- */
+  .hero {
+    background: radial-gradient(circle at top left, var(--dark-bg-alt), var(--dark-bg));
+    padding: 110px 20px 120px;
+  }
+
+  .hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+    color: var(--gold);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .hero-text .lead {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    margin: 20px 0 2.6em;
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+
+  /* -----------------------------------------
+     SECCIONES — GENERAL
+  ----------------------------------------- */
+  .story-section {
+    padding: 90px 20px;
+    position: relative;
+  }
+
+  .two-col {
+    display: flex;
+    gap: 55px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .story-section h2 {
+    color: var(--gold);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.9rem;
+    letter-spacing: 0.75px;
+  }
+
+  .story-section p {
+    color: var(--text-light);
+    font-size: 1.07rem;
+    line-height: 1.72;
+    margin-bottom: 12px;
+    max-width: 90%;
+  }
+
+  /* Fondos alternados (más preciso que nth-child) */
+  .story-section:nth-of-type(odd) {
+    background: radial-gradient(circle at top left, var(--dark-bg-alt), var(--dark-bg) 70%);
+  }
+
+  .story-section:nth-of-type(even) {
+    background: radial-gradient(circle at bottom right, var(--dark-bg-alt), var(--dark-bg) 75%);
+  }
+
+  /* Línea dorada elegante */
+  .story-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 65%;
+    height: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(240,199,94,0.28),
+      transparent
+    );
+  }
+
+
+  /* -----------------------------------------
+     REVIEWS
+  ----------------------------------------- */
+  .reviews-preview {
+    background: var(--dark-bg-alt);
+    padding: 90px 20px;
+    text-align: center;
+  }
+
+  .reviews-preview h2 {
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+  }
+
+  .reviews-preview .no-reviews {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+  }
+
+
+  /* -----------------------------------------
+     CTA FINAL
+  ----------------------------------------- */
+  .story-cta {
+    padding: 110px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--bg-light), var(--dark-bg));
+  }
+
+  .story-cta h2 {
+    color: var(--gold);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .story-cta p {
+    color: var(--text-light);
+    font-size: 1.12rem;
+    max-width: 600px;
+    margin: 10px auto 2.3em;
+    line-height: 1.7;
+  }
+
+  .story-cta .btn-primary.large {
+    background: var(--gold);
+    color: var(--dark-bg-alt);
+    padding: 15px 34px;
+    display: inline-block;
+    font-weight: 600;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: all var(--transition);
+  }
+
+  .story-cta .btn-primary.large:hover {
+    background: var(--text);
+    color: var(--dark-bg);
+  }
+
+
+  /* -----------------------------------------
+     RESPONSIVE — MÓVILES
+  ----------------------------------------- */
+  @media (max-width: 1000px) {
+
+    .two-col,
+    .hero-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero-img img,
+    .story-section img {
+      height: 260px;
+    }
+
+    .story-section h2 {
+      font-size: 1.6rem;
+      letter-spacing: 0.6px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.3rem;
+    }
+
+    .story-section p,
+    .hero-text .lead {
+      max-width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .story-section {
+      padding: 70px 20px;
+    }
+  }
+}

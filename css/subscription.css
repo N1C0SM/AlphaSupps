@@ -1,0 +1,182 @@
+/* ============================================
+   SUBSCRIPTION BOX - ESTILOS COMPARTIDOS
+   Usado en pack.php y supplement.php
+============================================ */
+
+.subscribe-box {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(240,199,94,0.35);
+}
+
+.subscribe-box .sub-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.subscribe-box input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.subscribe-options {
+  display: none;
+  margin-top: 10px;
+}
+
+.subscribe-options.active {
+  display: block;
+}
+
+.subscribe-options label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.subscribe-options select {
+  margin-top: 5px;
+  width: 100%;
+  padding: 8px;
+  background: var(--bg-dark);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.subscribe-options select:hover,
+.subscribe-options select:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.subscribe-note {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  opacity: 0.85;
+}
+
+.subscribe-note p {
+  margin: 0;
+}
+
+/* ============================================
+   NUEVA SECCIÓN DE SUSCRIPCIÓN MEJORADA
+============================================ */
+.subscription-option {
+  padding: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(240, 199, 94, 0.08) 0%,
+    rgba(240, 199, 94, 0.04) 100%
+  );
+  border: 1.5px solid rgba(240, 199, 94, 0.35);
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.subscription-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.subscription-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.subscription-label strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.subscription-details {
+  display: none;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(240, 199, 94, 0.2);
+  animation: slideDown 0.3s ease-out;
+}
+
+.subscription-details.active {
+  display: block;
+}
+
+.subscription-details select {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--bg-dark);
+  border: 1.5px solid rgba(240, 199, 94, 0.3);
+  border-radius: 8px;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-bottom: 10px;
+}
+
+.subscription-details select:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(240, 199, 94, 0.2);
+}
+
+.subscription-details select:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 12px rgba(240, 199, 94, 0.3);
+}
+
+.subscription-price {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.subscription-price strong {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.subscription-text {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

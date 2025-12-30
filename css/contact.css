@@ -1,0 +1,79 @@
+/* ----- FAQ ----- */
+
+
+
+
+/* ----- CONTACT ----- */
+.page-contact {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    h1{
+        color: white;
+    }
+}
+
+.page-contact .intro {
+    margin-bottom: 2rem;
+    color: #777;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contact-form,
+.contact-info {
+    background: #111;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #222;
+    a{
+        color: var(--accent, #f1c40f);
+    }
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: #181818;
+    border: 1px solid #333;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    color: white;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 1px solid var(--accent, #f1c40f);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--accent, #f1c40f);
+    border: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-info h3 {
+    margin-top: 0;
+    color: var(--accent, #f1c40f);
+}
+
+.contact-info p {
+    color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

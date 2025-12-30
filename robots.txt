@@ -1,0 +1,88 @@
+# Robots.txt para AlphaSupps - Optimizado para SEO
+# https://alphasupps.alwaysdata.net/robots.txt
+
+# Reglas para todos los bots
+User-agent: *
+Allow: /
+
+# Permitir crawling de contenido principal
+Allow: /views/
+Allow: /landing/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Bloquear acceso a áreas privadas y sistema
+Disallow: /admin/
+Disallow: /config/
+Disallow: /controllers/
+Disallow: /models/
+Disallow: /components/
+Disallow: /includes/
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /phpMailer/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /sitemap-generator.php
+
+# Bloquear páginas de usuario sin valor SEO
+Disallow: /views/cart.php
+Disallow: /views/login.php
+Disallow: /views/register.php
+Disallow: /views/reset_password.php
+Disallow: /views/forgot-password.php
+Disallow: /views/unsubscribe.php
+Disallow: /views/invoice.php
+
+# Limitar crawling de imágenes pesadas (opcional - descomenta si es necesario)
+# Disallow: /images/products/
+# Disallow: /images/brands/
+
+# Reglas específicas para Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Permitir Google Images acceder a todas las imágenes
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Reglas para Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Reglas para motores de búsqueda móviles
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Reglas para bots de redes sociales
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Bloquear bots maliciosos comunes
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Directivas especiales para SEO
+# Host directive (útil si tienes múltiples dominios)
+# Host: https://alphasupps.com
+
+# Crawl-delay para ser respetuoso con el servidor
+Crawl-delay: 1
+
+# Sitemap principal
+Sitemap: https://alphasupps.alwaysdata.net/sitemap.xml
+

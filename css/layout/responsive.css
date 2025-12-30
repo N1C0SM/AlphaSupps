@@ -1,0 +1,139 @@
+/* ============================================
+   RESPONSIVE - MEDIA QUERIES
+   Breakpoints y comportamiento adaptativo
+============================================ */
+
+:root {
+  --bp-mobile: 480px;
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+  --bp-wide: 1440px;
+}
+
+/* Mobile First - Base */
+@media (max-width: 479px) {
+  .header-content {
+    flex-direction: column;
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  nav {
+    width: 100%;
+    flex-direction: column;
+    gap: var(--gap-sm);
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .container {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+}
+
+/* Tablet */
+@media (min-width: 480px) and (max-width: 767px) {
+  .container {
+    padding: var(--spacing-lg);
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .container {
+    padding: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-lg);
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-lg);
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap-lg);
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--gap-lg);
+  }
+}
+
+/* Orientación */
+@media (orientation: landscape) and (max-height: 600px) {
+  header, footer {
+    position: fixed;
+  }
+
+  header {
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  footer {
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+/* Print */
+@media print {
+  header, footer, .sidebar, .navigation {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}
+
+/* Preferencias de usuario */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+  }
+}

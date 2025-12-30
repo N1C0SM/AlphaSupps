@@ -1,0 +1,49 @@
+@media print {
+  header,
+  footer,
+  .cookie-consent,
+  .actions,
+  .cookie-btn {
+    display: none !important;
+  }
+
+  body {
+    background: var(--text);
+    color: var(--dark-bg);
+    font-family: var(--font);
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+
+  .legal-page {
+    padding: 1rem;
+    background: transparent;
+    color: var(--dark-bg);
+
+    .legal-container {
+      h1,
+      h2 {
+        color: var(--dark-bg);
+        border: none;
+        text-shadow: none;
+      }
+
+      p,
+      li {
+        color: var(--dark-bg);
+      }
+    }
+  }
+
+  a {
+    color: var(--dark-bg);
+    text-decoration: none;
+  }
+
+  * {
+    box-shadow: none !important;
+    background-image: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+  }
+}

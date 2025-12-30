@@ -1,0 +1,206 @@
+/* ============================================
+   PÁGINA DE PRODUCTOS (LISTADO)
+   Grillas, filtros y catálogo
+============================================ */
+
+.products-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: var(--gap-xl);
+  padding: var(--spacing-xl);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.products-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+
+/* Header de productos */
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  background: var(--bg-surface);
+  border-radius: var(--radius);
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+}
+
+.products-count {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.products-sort {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.products-sort select {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-dark);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* Grid de productos */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--gap-lg);
+}
+
+.product-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 24px rgba(240, 199, 94, 0.2);
+}
+
+.product-card-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--bg-dark);
+  overflow: hidden;
+  position: relative;
+}
+
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.product-card:hover .product-card-image img {
+  transform: scale(1.1);
+}
+
+.product-card-badge {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background: var(--accent);
+  color: var(--primary);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.product-card-content {
+  padding: var(--spacing-lg);
+}
+
+.product-card-name {
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.3;
+  min-height: 40px;
+}
+
+.product-card-desc {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin-bottom: var(--spacing-md);
+  min-height: 35px;
+}
+
+.product-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.product-card-price {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.product-card-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.product-card-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(240, 199, 94, 0.2);
+  color: var(--accent);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  font-size: 1rem;
+}
+
+.product-card-btn:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+/* Paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.pagination a,
+.pagination span {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  color: var(--text);
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.pagination a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.pagination .active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--primary);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .products-container {
+    grid-template-columns: 1fr;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .products-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

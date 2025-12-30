@@ -1,0 +1,94 @@
+.cookie-consent {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  background: rgba(17, 17, 17, 0.95);
+  color: var(--text);
+  border: 1px solid var(--bg-light);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  z-index: 9999;
+  display: none;
+  box-shadow: var(--shadow);
+
+  &.compact {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  p {
+    margin: 0 0 0.6rem 0;
+    font-size: 0.95rem;
+  }
+
+  .cookie-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    .cookie-btn {
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem 0.8rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: var(--transition);
+      font-size: 0.9rem;
+
+      &.primary {
+        background: var(--accent);
+        color: var(--dark-bg-alt);
+
+        &:hover {
+          background: var(--accent-light);
+        }
+      }
+
+      &.secondary {
+        background: var(--bg-panel);
+        color: var(--text-light);
+
+        &:hover {
+          background: var(--bg-light);
+        }
+      }
+    }
+  }
+
+  .cookie-panel {
+    display: none;
+    margin-top: 0.6rem;
+    border-top: 1px solid var(--bg-light);
+    padding-top: 0.6rem;
+
+    .cookie-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.3rem 0;
+
+      input {
+        accent-color: var(--accent);
+      }
+    }
+
+    .cookie-note {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+  }
+
+  .manage-cookies-link {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+}
