@@ -342,13 +342,13 @@ function mostrarToastPedido(resumen) {
       <div class="toast-order__top">
         <div class="pulse-dot"></div>
         <div class="toast-copy">
-          <p class="kicker">Estamos preparando tu pedido</p>
+          <p class="kicker">Pedido confirmado</p>
           <p class="title">#${safeId}</p>
           ${safeTotal ? `<p class="sub">${safeTotal}</p>` : ""}
         </div>
         <button class="toast-close" aria-label="Cerrar notificación">&times;</button>
       </div>
-      <a class="toast-order__cta" href="${trackUrl}">Ver seguimiento en tiempo real</a>
+      <a class="toast-order__cta" href="${trackUrl}">¿Ver seguimiento ahora?</a>
     `;
 
     toast.querySelector(".toast-close").addEventListener("click", () => toast.remove());

@@ -35,7 +35,6 @@ $userNameNav = $isLoggedNav ? htmlspecialchars($user['name'] ?? 'Usuario') : '';
         <a href="../views/subscriptions.php" class="nav-link">Mis suscripciones</a>
       <?php endif; ?>
       <a href="../views/story.php" class="nav-link">Mi historia</a>
-      <a href="../views/track.php" class="nav-link">Seguimiento</a>
       <a href="../views/blog.php" class="nav-link">Blog</a>
 
       <a href="../views/cart.php" class="nav-link cart-btn" aria-label="Carrito">
@@ -112,7 +111,6 @@ $userNameNav = $isLoggedNav ? htmlspecialchars($user['name'] ?? 'Usuario') : '';
     <a href="../views/supplements.php" class="nav-link">💊 Suplementos</a>
     <a href="../views/alphabox.php" class="nav-link">⚡ AlphaBox</a>
     <a href="../views/story.php" class="nav-link">📘 Mi historia</a>
-    <a href="../views/track.php" class="nav-link">📍 Seguimiento</a>
     <a href="../views/blog.php" class="nav-link">📝 Blog</a>
 
     <hr>
