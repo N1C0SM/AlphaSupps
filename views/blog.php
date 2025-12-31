@@ -13,16 +13,21 @@
       <?php if (!empty($posts)): ?>
         <div class="blog-container">
           <?php foreach ($posts as $p): ?>
-            <div class="post">
             <article class="post">
               <?php if (!empty($p['image'])): ?>
-                <img loading="lazy" src="<?= htmlspecialchars($p['image']) ?>" alt="<?= htmlspecialchars($p['title']) ?>">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="<?= htmlspecialchars($p['image']) ?>"
+                  alt="<?= htmlspecialchars($p['title']) ?>"
+                  width="720"
+                  height="405"
+                >
               <?php endif; ?>
               <h2><?= htmlspecialchars($p['title']) ?></h2>
               <p><?= substr(strip_tags($p['short_description']), 0, 150) ?></p>
               <a href="./post.php?id=<?=$p['id'] ?>" class="cta-btn">Leer más</a>
             </article>
-            </div>
           <?php endforeach; ?>
         </div>
       <?php else: ?>

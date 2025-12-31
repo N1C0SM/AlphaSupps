@@ -33,7 +33,9 @@ main.blog-page {
 
     img {
       width: 100%;
-      height: 200px;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      max-height: 260px;
       object-fit: cover;
       border-radius: var(--radius);
       margin-bottom: 15px;
