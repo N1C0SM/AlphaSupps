@@ -1,6 +1,12 @@
 # AlphaSupps 🏋️‍♂️
 
-AlphaSupps es una plataforma completa de comercio electrónico especializada en suplementos deportivos, desarrollada en PHP nativo con arquitectura MVC. Ofrece una experiencia de compra premium con características avanzadas como packs personalizados, suscripciones mensuales, aplicación web progresiva (PWA) y un panel administrativo completo.
+Proyecto de comercio electrónico de suplementos deportivos de Nicolás San Marcos, desarrollado con PHP, MySQL y JavaScript. Reúne catálogo, packs personalizados, suscripciones y administración, con una estructura de modelos, vistas y controladores.
+
+Este proyecto conecta mi interés por el deporte con el desarrollo de aplicaciones con bases de datos e integraciones externas.
+
+**Guías del proyecto:** [organización del CSS](CSS-ORGANIZATION.md) · [estilos](README-CSS.md) · [comprobaciones de rendimiento](performance/README.md).
+
+Los flujos de compra, correo e IA requieren configuración propia y pruebas de sus servicios externos.
 
 ## 🚀 Características Principales
 
@@ -44,7 +50,6 @@ AlphaSupps es una plataforma completa de comercio electrónico especializada en 
 ### Backend
 *   **PHP 7.4+**: Lenguaje principal con arquitectura MVC
 *   **MySQL**: Base de datos relacional con consultas optimizadas
-*   **Composer**: Gestión de dependencias (aunque mínimas)
 
 ### Frontend
 *   **HTML5/CSS3**: Estructura y estilos responsivos
@@ -98,7 +103,6 @@ AlphaSupps/
 ├── models/                # Modelos de datos (MVC)
 ├── phpMailer/             # Librería de emails
 ├── views/                 # Vistas públicas (MVC)
-├── landing/               # Página de pre-lanzamiento
 ├── sitemap/               # Sitemap SEO (XML, XSL y generador)
 ├── manifest.json          # PWA Manifest
 └── README.md
@@ -113,7 +117,6 @@ AlphaSupps/
 
 ### Endpoints Principales
 - **`GET /api/cart.php`**: Gestión del carrito de compras
-- **`POST /api/custom-packs.php`**: Creación de packs personalizados
 - **`POST /api/test-session.php`**: Testing de sesiones de usuario
 - **`POST /api/generate-image.php`**: Generación de imágenes vía ChatGPT (solo admin, requiere prompt)
 
@@ -146,7 +149,6 @@ AlphaSupps/
 - **PHP 7.4+** con extensiones: `mysqli`, `json`, `mbstring`
 - **MySQL 5.7+** o **MariaDB 10.0+**
 - **Apache/Nginx** o servidor web compatible
-- **Composer** (opcional, para dependencias futuras)
 
 ### Instalación Paso a Paso
 
@@ -221,21 +223,10 @@ AlphaSupps/
    - **Nginx**: Configura rewrites para URLs amigables
    - Apunta el document root a la carpeta del proyecto
 
-5. **Permisos de Archivos**
-   ```bash
-   # Para escritura de logs o uploads (si los agregas)
-   chmod 755 -R .
-   ```
+5. **Acceder al sitio**
+   Si sirves el proyecto bajo `/AlphaSupps`, abre `http://localhost/AlphaSupps/views/index.php`. El panel está en `http://localhost/AlphaSupps/admin/dashboard.php` y requiere una cuenta con permisos. Adapta las rutas a tu servidor.
 
-6. **Ejecutar Migraciones (Opcional)**
-   ```bash
-   php migrate_packs.php
-   ```
-
-7. **Acceder al Sitio**
-   - **Frontend**: `http://localhost/AlphaSupps/views/`
-   - **Admin**: `http://localhost/AlphaSupps/admin/dashboard.php`
-   - **Pre-lanzamiento**: `http://localhost/AlphaSupps/landing/`
+   Revisa `config/bd.sql` antes de importarlo en una base existente. El repositorio no incluye el antiguo script `migrate_packs.php`.
 
 ## 🚀 Despliegue en Producción
 
@@ -298,7 +289,7 @@ AlphaSupps/
 
 ## 📝 Licencia
 
-Este proyecto está bajo la Licencia MIT. Ver archivo `LICENSE` para más detalles.
+El README original indicaba MIT, pero no hay un archivo de licencia en el repositorio que permita verificar sus términos. Pendiente de formalización por el titular.
 
 ## 📞 Contacto
 
